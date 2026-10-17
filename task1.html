@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1: Train Ticket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center min-vh-100 p-3">
+
+<div class="card shadow-lg border-0 ticket-card">
+    <div class="card-header text-white px-4 py-3" style="background-color: #0F6B5F; border-radius: 15px 15px 0 0;">
+        <h3 class="mb-0 fw-bold">Book a train ticket</h3>
+    </div>
+    <div class="card-body p-4">
+        <form>
+            <!-- Trip Type -->
+            <div class="mb-4 d-flex gap-2">
+                <input type="radio" class="btn-check" name="tripType" id="oneWay" autocomplete="off" checked>
+                <label class="btn btn-outline-custom rounded-pill px-4" for="oneWay">One way</label>
+
+                <input type="radio" class="btn-check" name="tripType" id="roundTrip" autocomplete="off">
+                <label class="btn btn-outline-custom rounded-pill px-4" for="roundTrip">Round trip</label>
+            </div>
+
+            <!-- Locations -->
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control bg-light border-0" id="from" placeholder="From" value="Astana" required>
+                        <label for="from" class="text-muted">From</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control bg-light border-0" id="to" placeholder="To" required>
+                        <label for="to" class="text-muted">To</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dates & Passengers -->
+            <div class="row g-3 mb-3">
+                <div class="col-md-4">
+                    <label for="departure" class="form-label fw-semibold small">Departure</label>
+                    <input type="date" class="form-control bg-light border-0 py-2" id="departure" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="return" class="form-label fw-semibold small">Return</label>
+                    <input type="date" class="form-control bg-light border-0 py-2" id="return">
+                </div>
+                <div class="col-md-4">
+                    <label for="passengers" class="form-label fw-semibold small">Passengers</label>
+                    <select class="form-select bg-light border-0 py-2" id="passengers" required>
+                        <option value="1">1 adult</option>
+                        <option value="2">2 adults</option>
+                        <option value="3">3 adults</option>
+                        <option value="4">4 adults</option>
+                        <option value="5">5 adults</option>
+                        <option value="6">6 adults</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Carriage Class -->
+            <div class="mb-4">
+                <label class="form-label fw-semibold small d-block mb-2">Carriage class</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="carriageClass" id="seat" value="seat" required>
+                    <label class="form-check-label text-muted" for="seat">Seat</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="carriageClass" id="coupe" value="coupe" checked>
+                    <label class="form-check-label text-muted" for="coupe">Coupé</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="carriageClass" id="sleeper" value="sleeper">
+                    <label class="form-check-label text-muted" for="sleeper">Sleeper</label>
+                </div>
+            </div>
+
+            <!-- Contacts -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <label for="phone" class="form-label fw-semibold small">Phone</label>
+                    <div class="input-group">
+                        <span class="input-group-text text-white border-0" style="background-color: #0F6B5F;">+7</span>
+                        <input type="tel" class="form-control bg-light border-0 py-2" id="phone" placeholder="701 234 56 78" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label fw-semibold small">Email</label>
+                    <input type="email" class="form-control bg-light border-0 py-2" id="email" placeholder="name@example.com" required>
+                </div>
+            </div>
+
+            <!-- Agreements -->
+            <div class="mb-4">
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="sms">
+                    <label class="form-check-label text-muted" for="sms">Also send the ticket by SMS</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rules" required>
+                    <label class="form-check-label text-muted" for="rules">I agree with the carriage rules</label>
+                </div>
+            </div>
+
+            <!-- Buttons (Responsive order) -->
+            <div class="d-flex flex-column flex-md-row justify-content-md-end gap-3 mt-4 btn-container">
+                <button type="reset" class="btn btn-outline-dark rounded-pill px-4 py-2 order-2 order-md-1 btn-clear">Clear</button>
+                <button type="submit" class="btn text-white fw-bold rounded-pill px-5 py-2 order-1 order-md-2 btn-find" style="background-color: #F2A93B; border: none;">Find trains</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
