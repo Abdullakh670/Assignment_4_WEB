@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment #4 — Orynbassar Abdullakh</title>
+    <!-- Подключаем Bootstrap, так как он используется в вашей работе -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body class="bg-light/ container py-5">
+    <div class="card shadow mx-auto" style="max-width: 600px;">
+        <div class="card-header bg-dark text-white text-center py-3">
+            <h1 class="h4 mb-0">Assignment #4: Forms and Validation</h1>
+            <p class="mb-0 small text-secondary">Student: Orynbassar Abdullakh | Group: IT 2510</p>
+        </div>
+        <div class="card-body p-4">
+            <p class="text-muted">Выберите задание для просмотра живой страницы:</p>
+            <div class="d-grid gap-3">
+                <a href="task1.html" class="btn btn-outline-primary text-start p-3">
+                    <strong>Task 1.</strong> Book a train ticket (Bootstrap + CSS)
+                </a>
+                <a href="task2.html" class="btn btn-outline-primary text-start p-3">
+                    <strong>Task 2.</strong> Registration for AITU Hack 2026 (HTML Validation)
+                </a>
+                <a href="task3.html" class="btn btn-outline-primary text-start p-3">
+                    <strong>Task 3.</strong> Fix a bad form (Accessible Cafe Form)
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
